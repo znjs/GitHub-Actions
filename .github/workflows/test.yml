@@ -29,8 +29,7 @@ jobs:
               run : yarn deploy
             - name: Setup finished
               id: finished
-              run: echo "::set-output
-name=text::hello-world-from-build-job"
+              run: echo "::set-output name=text::hello-world-from-build-job"
     test-app:
         needs: buildApp
         runs-on: ubuntu-latest
