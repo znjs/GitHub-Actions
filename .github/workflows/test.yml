@@ -1,0 +1,15 @@
+myapp:
+    service: my-project
+    keyname: value
+    test1: script1
+    test2: script2
+    array: 
+        - key1: value1
+          keyrandom1: valuerandom1
+        - key2: value2
+          keyrandom2: valuerandom2
+
+multiline: |
+    line1
+    line2
+    line3
