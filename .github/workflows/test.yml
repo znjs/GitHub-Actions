@@ -1,13 +1,8 @@
 name: my first github action
 on: [push]
 jobs:
-    print-hello-world:
+    build-app:
         runs-on: ubuntu-latest
-        steps: 
-            - run: echo "hello world" #its a bash command
-            - run: echo "this is a step numeber 2" #elements in a array are executed sequentially
-    print-hello-world2:
-        runs-on: ubuntu-latest
-        steps: 
-            - run: echo "hello world" #its a bash command
-            - run: echo "this is a step numeber 2" #elements in a array are executed sequentially
+        steps:
+            - uses: actions/checkout@v2
+            - run: tree
