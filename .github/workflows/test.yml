@@ -1,15 +1,8 @@
-myapp:
-    service: my-project
-    keyname: value
-    test1: script1
-    test2: script2
-    array: 
-        - key1: value1
-          keyrandom1: valuerandom1
-        - key2: value2
-          keyrandom2: valuerandom2
-
-multiline: |
-    line1
-    line2
-    line3
+name: my first github action
+on: [push]
+jobs:
+    print-hello-world:
+        runs-on: ubuntu-latest
+        steps: 
+            - run: echo "hello world" #its a bash command
+            - run: echo "this is a step numeber 2" #elements in a array are executed sequentially
