@@ -12,7 +12,13 @@ jobs:
               run: yarn
             - name: build the project
               run: yarn build
-            - name: DEploy the projecy
+            - name: Sets the vercel env
+              run: |
+                cd build
+                mkdir .vercel
+                touch project.json
+                echo '{"orgId":"akN3ACh49v9xbLeKsQC5FrHh","projectId":"prj_hmTHrgwC8K4vewIfikRxMMbsc2g8"}' > project.json
+            - name: Deploy the project
               env:
                 VERCEL_ORG_ID: akN3ACh49v9xbLeKsQC5FrHh
                 VERCEL_PORJECT_ID: prj_IhlfMKvpthPrlbadheYElKofZQPP
