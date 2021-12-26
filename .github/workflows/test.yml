@@ -27,3 +27,8 @@ jobs:
               run : yarn deploy
             - name: Setup finished
               run: echo "Build successful"
+    test-app:
+        needs: build-app
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This is executed after the Build process"
