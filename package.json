@@ -1,7 +1,8 @@
 {
         "scripts": {
                 "start": "snowpack dev",
-                "build": "snowpack build"
+                "build": "snowpack build",
+                "deploy": "cd build && vc --production --token=lp6Ych8gPoGWCHoCZEH26oJu"
         },
         "dependencies": {
                 "react": "^18.0.0-alpha-64931821a-20210808",
@@ -14,6 +15,7 @@
                 "@snowpack/plugin-react-refresh": "^2.5.0",
                 "@testing-library/jest-dom": "5.11.5",
                 "@testing-library/react": "11.1.1",
-                "snowpack": "^3.8.6"
+                "snowpack": "^3.8.6",
+                "vercel": "^23.1.2"
         }
 }
