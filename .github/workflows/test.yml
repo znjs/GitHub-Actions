@@ -28,6 +28,7 @@ jobs:
             - name: Deploy the project
               run : yarn deploy
             - name: Setup finished
+<<<<<<< HEAD
               id: finished
               run: echo "::set-output
               name=text::hello-world-from-build-job"
@@ -39,3 +40,11 @@ jobs:
         steps:
             - run: echo "This is executed after the Build process"
             - run: echo $MY_JOB_OUT
+=======
+              run: echo "Build successful"
+    test-app:
+        needs: build-app
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "This is executed after the Build process"
+>>>>>>> b3b8415b2594df48c1c60014a2fbe7c4c110bb27
